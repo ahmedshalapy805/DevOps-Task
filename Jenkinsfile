@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git branch: 'main', url: 'git@github.com:ahmedshalapy805/DevOps-Task.git'
+                git branch: 'main', url: 'https://github.com/ahmedshalapy805/DevOps-Task.git'
             }
         }
 
