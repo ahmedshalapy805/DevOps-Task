@@ -27,14 +27,14 @@
 
     - name: Pull the Docker image
       docker_image:
-        name: ahmedshalapy805/devops-task
+        name: ahmedshalapy/devops-task
         tag: latest
         source: pull
 
     - name: Run the Docker container
       docker_container:
         name: devops-task-app
-        image: ahmedshalapy805/devops-task:latest
+        image: ahmedshalapy/devops-task:latest
         ports:
           - "8080:8080"
         state: started
