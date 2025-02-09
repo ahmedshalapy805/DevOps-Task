@@ -16,7 +16,7 @@ pipeline {
 
         stage('Build Application') {
             steps {
-                sh './mvnw clean package'
+                sh 'mvnw clean package'
             }
         }
 
