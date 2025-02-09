@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKER_HUB_CREDENTIALS = credentials('123123123')
-        DOCKER_IMAGE_NAME = 'ahmedshalapy805/devops-task'
+        DOCKER_IMAGE_NAME = 'ahmedshalapy/devops-task'
         DOCKER_IMAGE_TAG = 'latest'
     }
 
