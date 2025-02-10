@@ -37,15 +37,17 @@ pipeline {
         }
 
         stage('Deploy with Ansible') {
-            steps {
-                script {
-                    ansiblePlaybook(
-                        playbook: 'deploy.yml',
-                        inventory: 'inventory.ini',
-                        credentialsId: 'ansible-ssh-key' // Use the SSH credentials ID
-                    )
-                }
+    steps {
+        script {
+            withCredentials([sshUserPrivateKey(credentialsId: 'ansible-ssh-key', keyFileVariable: 'SSH_KEY')]) {
+                sh """
+                    ansible-playbook deploy.yml -i inventory.ini \
+                    --private-key=\$SSH_KEY -u ahmedshalapy
+                """
             }
         }
+    }
+}
+
     }
 }
