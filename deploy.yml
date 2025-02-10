@@ -37,7 +37,7 @@
         name: devops-task-app
         image: ahmedshalapy/devops-task:latest
         ports:
-          - "8080:8080"
+          - "8085:8080"
         state: started
 
     - name: Install Prometheus
