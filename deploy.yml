@@ -18,6 +18,7 @@
 - name: Deploy Java Application
   hosts: all
   become: yes
+  become_method: sudo
   tasks:
     - name: Ensure Docker is installed
       apt:
