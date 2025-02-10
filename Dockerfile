@@ -21,10 +21,11 @@ FROM openjdk:11-jre-slim
 WORKDIR /app
 
 # Copy the built JAR file into the container
-COPY target/*.war app.war
+COPY target/*.jar app.jar
+
 
 # Expose the port the app runs on
 EXPOSE 8080
 
 # Command to run the application
-ENTRYPOINT ["java", "-jar", "app.war"]
+ENTRYPOINT ["java", "-jar", "app.jar"]
