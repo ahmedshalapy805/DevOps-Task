@@ -27,14 +27,23 @@ pipeline {
         }
 
         stage('Build and Push Docker Image') {
-            steps {
-                script {
-                    sh "docker build -t ${DOCKER_IMAGE_NAME}:${DOCKER_IMAGE_TAG} ."
-                    sh "echo ${DOCKER_HUB_CREDENTIALS_PSW} | docker login -u ${DOCKER_HUB_CREDENTIALS_USR} --password-stdin"
-                    sh "docker push ${DOCKER_IMAGE_NAME}:${DOCKER_IMAGE_TAG}"
-                }
-            }
+    steps {
+        script {
+            // Ensure the WAR file is copied to the build context
+            sh 'cp target/jpetstore.war .'
+
+            // Build the Docker image
+            sh "docker build -t ${DOCKER_IMAGE_NAME}:${DOCKER_IMAGE_TAG} ."
+
+            // Login to Docker Hub
+            sh "echo ${DOCKER_HUB_CREDENTIALS_PSW} | docker login -u ${DOCKER_HUB_CREDENTIALS_USR} --password-stdin"
+
+            // Push the image
+            sh "docker push ${DOCKER_IMAGE_NAME}:${DOCKER_IMAGE_TAG}"
         }
+    }
+}
+
 
         stage('Deploy with Ansible') {
     steps {
