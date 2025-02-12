@@ -5,4 +5,4 @@ WORKDIR /usr/local/tomcat/webapps/
 # Use a relative path to copy the file
 COPY target/jpetstore.war jpetstore.war
 
-EXPOSE 8080
+EXPOSE 8989
