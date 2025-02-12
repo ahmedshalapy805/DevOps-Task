@@ -3,10 +3,10 @@
 FROM tomcat:9-jre17
 
 # Set the working directory
-WORKDIR /app 
+WORKDIR /usr/local/tomcat/webapps/ 
 
 # Copy the built WAR file into the container
-COPY target/jpetstore.war /usr/local/tomcat/webapps/jpetstore.war
+COPY /home/ahmedshalapy/Desktop/DevOps-Task/target/jpetstore.war jpetstore.war
 
 
 # Expose the port the app runs on
