@@ -6,7 +6,7 @@ FROM tomcat:9-jre17
 WORKDIR /usr/local/tomcat/webapps
 
 # Copy the built JAR file into the container
-COPY target/*.war app.war
+COPY target/jpetstore.war jpetstore.war
 
 
 # Expose the port the app runs on
