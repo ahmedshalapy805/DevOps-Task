@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #
 #    Copyright 2010-2025 the original author or authors.
 #
@@ -16,13 +17,12 @@
 
 
 # Use tomcat9 image
+
 FROM tomcat:9-jre17
 
-# Set the working directory
-WORKDIR /usr/local/tomcat/webapps
+WORKDIR /usr/local/tomcat/webapps/
 
-# Copy the built JAR file into the container
-COPY ./target/*.war /usr/local/tomcat/webapps/app.war
+COPY jpetstore.war jpetstore.war
 
 
 # Expose the port the app runs on
