@@ -13,7 +13,7 @@ Export-Package: org.mybatis.jpetstore.domain;version="6.1.1.SNAPSHOT",or
  g.mybatis.jpetstore.mapper;version="6.1.1.SNAPSHOT",org.mybatis.jpetsto
  re.service;version="6.1.1.SNAPSHOT",org.mybatis.jpetstore.web.actions;v
  ersion="6.1.1.SNAPSHOT"
-Git-Revision: 7371510d70c4ef92499d7db199de20dab879031d
+Git-Revision: 59017ce648812f2d4d6b3b45384bdc1f438b737d
 Import-Package: javax.servlet.http,net.sourceforge.stripes.action,net.so
  urceforge.stripes.integration.spring,net.sourceforge.stripes.validation
  ,org.springframework.stereotype,org.springframework.transaction.annotat
