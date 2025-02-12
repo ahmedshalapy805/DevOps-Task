@@ -26,7 +26,7 @@ COPY ./target/*.war /usr/local/tomcat/webapps/app.war
 
 
 # Expose the port the app runs on
-EXPOSE 9999
+EXPOSE 8989
 
 # Command to run the application
 #ENTRYPOINT ["java", "-jar", "app.jar"]
