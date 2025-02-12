@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 #
 #    Copyright 2010-2025 the original author or authors.
 #
